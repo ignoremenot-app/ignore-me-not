@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service - Ignore Me Not</title>
+<meta name="description" content="Terms of Service for the Ignore Me Not reminder app.">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --red: #CC0000; --ink: #161616; --muted: #4A4A4A; --soft: #F6F6F4; --line: #E2E2E2; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: #FFFFFF; }
+  a { color: #B30000; }
+  a:hover { color: #800000; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  h1, h2 { font-family: 'Space Grotesk', sans-serif; margin: 0; }
+  h1 { font-size: 64px; line-height: 1.02; letter-spacing: -0.02em; }
+  h2 { font-size: 44px; line-height: 1.1; }
+  h3 { margin: 0; }
+  p { margin: 0; }
+  .btn { display: inline-block; text-decoration: none; font-weight: 600; border-radius: 12px; padding: 16px 26px; font-size: 17px; }
+  .btn-red { background: var(--red); color: #FFFFFF; }
+  .btn-red:hover { background: #A30000; color: #FFFFFF; }
+  .btn-outline { background: #FFFFFF; color: var(--ink); border: 1.5px solid #D6D6D6; }
+  .btn-outline:hover { color: var(--ink); border-color: var(--ink); }
+  .pill { display: inline-block; background: #FDECEC; color: #9E0000; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; }
+  .section { padding: 88px 0; }
+  .soft { background: var(--soft); }
+  .lead { font-size: 18px; color: var(--muted); line-height: 1.55; }
+  .head { display: flex; flex-direction: column; gap: 12px; max-width: 640px; margin-bottom: 48px; }
+
+  header { border-bottom: 1px solid #EEEEEE; }
+  .nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .brand:hover { color: var(--ink); }
+  .logo { width: 36px; height: 36px; border-radius: 50%; background: var(--red); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; }
+  .brand span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; }
+  .links { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px; font-weight: 500; }
+  .links a { color: #3A3A3A; text-decoration: none; }
+  .links .btn { padding: 12px 20px; font-size: 15px; border-radius: 10px; color: #FFFFFF; }
+
+  .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 56px; padding-top: 88px; padding-bottom: 96px; }
+  .hero-text { flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+  .hero-text .sub { font-size: 20px; line-height: 1.55; color: var(--muted); max-width: 520px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px; }
+  .small { font-size: 14px; color: #5E5E5E; line-height: 1.5; }
+  .mock { flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; align-items: center; }
+  .screen-frame { width: 100%; max-width: 540px; background: #1E1E1E; border-radius: 18px 18px 6px 6px; padding: 14px; }
+  .screen { background: var(--red); border-radius: 6px; aspect-ratio: 16 / 10; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; text-align: center; color: #FFFFFF; }
+  .screen .k { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; }
+  .screen .t { font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; line-height: 1.05; }
+  .screen .w { font-size: 15px; font-weight: 700; }
+  .screen .n { font-size: 13px; opacity: 0.92; }
+  .screen .b { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding-top: 10px; }
+  .screen .b div { background: #FFFFFF; color: #B30000; font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: 6px; }
+  .base { width: 112%; max-width: 620px; height: 16px; background: #CFCFCF; border-radius: 0 0 14px 14px; }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .card { background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
+  .num { width: 44px; height: 44px; border-radius: 50%; background: var(--red); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; }
+  .card h3 { font-size: 22px; }
+  .card p, .feat p { font-size: 16px; color: var(--muted); line-height: 1.55; }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px 32px; }
+  .feat { display: flex; gap: 16px; align-items: flex-start; }
+  .feat svg { flex: none; }
+  .feat div { display: flex; flex-direction: column; gap: 6px; }
+  .feat h3 { font-size: 19px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .chips span { background: var(--soft); padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500; }
+
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 880px; }
+  .plan { border-radius: 20px; padding: 36px; display: flex; flex-direction: column; gap: 20px; }
+  .plan.free { background: #FFFFFF; border: 1.5px solid var(--line); }
+  .plan.prem { background: var(--ink); color: #FFFFFF; }
+  .plan .name { font-size: 18px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .badge { background: var(--red); font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; color: #FFFFFF; }
+  .price { display: flex; align-items: baseline; gap: 6px; }
+  .price b { font-family: 'Space Grotesk', sans-serif; font-size: 48px; }
+  .list { display: flex; flex-direction: column; gap: 10px; font-size: 16px; }
+  .plan.free .list { color: #3A3A3A; }
+  .plan.prem .list { color: #E6E6E6; }
+  .plan .btn { margin-top: auto; text-align: center; }
+  .plan.free .btn { background: #FFFFFF; color: var(--ink); border: 1.5px solid var(--ink); }
+  .soon-box { margin-top: auto; text-align: center; background: #3A3A3A; color: #E6E6E6; padding: 15px 22px; border-radius: 12px; font-weight: 600; }
+
+  .soon { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .soon div { border: 1.5px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .soon h3 { font-size: 18px; }
+  .soon p { font-size: 15px; color: var(--muted); line-height: 1.5; }
+
+  .faq { max-width: 820px; }
+  details { border-top: 1px solid var(--line); padding: 22px 0; }
+  details:last-child { border-bottom: 1px solid var(--line); }
+  summary { font-size: 18px; font-weight: 600; cursor: pointer; }
+  details p { margin-top: 12px; font-size: 16px; color: var(--muted); line-height: 1.6; }
+
+  .final { background: var(--red); color: #FFFFFF; padding: 80px 24px; text-align: center; }
+  .final h2 { font-size: 48px; line-height: 1.08; max-width: 820px; margin: 0 auto 22px; }
+  .final .btn { background: #FFFFFF; color: #B30000; font-weight: 700; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #5E5E5E; padding-top: 32px; padding-bottom: 32px; }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 44px; }
+    h2, .final h2 { font-size: 34px; }
+    .section { padding: 64px 0; }
+    .hero { padding-top: 56px; padding-bottom: 64px; gap: 40px; }
+    .links { gap: 16px; }
+    .screen .t { font-size: 28px; }
+    .base { width: 100%; }
+  }
+</style>
+
+<style>
+  .legal { max-width: 760px; padding-top: 64px; padding-bottom: 88px; }
+  .legal h1 { font-size: 48px; margin-bottom: 12px; }
+  .legal .updated { color: #5E5E5E; font-size: 14px; margin-bottom: 40px; }
+  .legal h2 { font-size: 24px; margin: 40px 0 12px; }
+  .legal p, .legal li { font-size: 16px; line-height: 1.7; color: #3A3A3A; }
+  .legal p + p { margin-top: 12px; }
+  .legal ul { padding-left: 22px; margin: 12px 0 0; }
+  .legal li + li { margin-top: 6px; }
+  .note { background: var(--soft); border-radius: 12px; padding: 16px 20px; margin-bottom: 32px; font-size: 15px; color: #3A3A3A; line-height: 1.6; }
+  .contact-card { border: 1.5px solid var(--line); border-radius: 16px; padding: 28px; margin-top: 24px; }
+  .contact-card h2 { margin-top: 0; }
+  .email { font-size: 22px; font-weight: 700; color: var(--ink); word-break: break-all; }
+  .flinks { display: flex; flex-wrap: wrap; gap: 20px; }
+  .flinks a { color: #5E5E5E; text-decoration: none; }
+  .flinks a:hover { color: var(--ink); text-decoration: underline; }
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><div class="logo" aria-hidden="true">!</div><span>Ignore Me Not</span></a>
+    <nav class="links">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn btn-red" href="index.html#download">Download free</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap legal">
+
+<h1>Terms of Service</h1>
+<p class="updated">Last updated: November 19, 2026</p>
+
+<p>These terms apply when you download, install or use the Ignore Me Not app or visit this website. In these terms, "Ignore Me Not", "we" and "us" mean the maker of the Ignore Me Not app. By using Ignore Me Not, you agree to these terms.</p>
+
+<h2>1. Using the app</h2>
+<p>We give you a personal, non-transferable license to install and use Ignore Me Not on your own computers. Please don't resell, redistribute, or modify the app, or try to get around the free-plan limit or the Premium license check.</p>
+
+<h2>2. Free plan and Premium</h2>
+<ul>
+  <li>The free plan includes up to 5 reminders.</li>
+  <li>Premium is a subscription, billed monthly or yearly, that unlocks unlimited reminders and extra features. Prices are shown on our website and at checkout.</li>
+  <li>Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns.</li>
+  <li>Subscriptions renew automatically until you cancel. You can cancel anytime from your Paddle receipt email or at paddle.net. Premium keeps working until the end of the period you paid for.</li>
+  <li>If your subscription ends, your first 5 reminders keep working and the rest are paused, not deleted.</li>
+</ul>
+
+<h2>3. Refunds</h2>
+<p>You can get a full refund within 14 days of any payment, no questions asked. See our <a href="refund.html">Refund Policy</a>.</p>
+
+<h2>4. Not a medical device</h2>
+<p>Ignore Me Not is a general reminder tool. It is not a medical device and doesn't give medical advice. Alerts only show while your computer is on, awake and running the app, and can be affected by your device settings, updates or power. Please don't rely on Ignore Me Not as your only reminder for anything critical, such as medication, safety or legal deadlines.</p>
+
+<h2>5. Calendar links</h2>
+<p>If you use calendar alerts, you're responsible for the calendar links you add and for keeping them private. Ignore Me Not only reads them to show alerts.</p>
+
+<h2>6. No warranty</h2>
+<p>Ignore Me Not is provided "as is." We work hard to make it reliable, but we can't promise it will be error-free or never miss an alert.</p>
+
+<h2>7. Limitation of liability</h2>
+<p>To the extent the law allows, we aren't liable for indirect or consequential losses, such as a missed appointment, payment or deadline. Our total liability to you is limited to the amount you paid us in the 12 months before the claim.</p>
+
+<h2>8. Changes</h2>
+<p>We may update the app and these terms. If we make important changes, we'll update the date at the top of this page. Continuing to use Ignore Me Not after a change means you accept the new terms.</p>
+
+<h2>9. Governing law</h2>
+<p>These terms are governed by the laws that apply where Ignore Me Not is operated.</p>
+
+<h2>10. Contact</h2>
+<p>Questions about these terms? Email <a href="mailto:hello@ignoremenot.app">hello@ignoremenot.app</a>.</p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Ignore Me Not</span>
+    <nav class="flinks" aria-label="Legal and contact">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="refund.html">Refund Policy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
