@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
+  [hidden] { display: none !important; }
   :root { --red: #CC0000; --ink: #161616; --muted: #4A4A4A; --soft: #F6F6F4; --line: #E2E2E2; }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -213,6 +214,14 @@
   .plan.prem .list { color: #E6E6E6; }
   .plan .btn { margin-top: auto; text-align: center; }
   .plan.free .btn { background: #FFFFFF; color: var(--ink); border: 1.5px solid var(--ink); }
+  .buy-box { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+  .buy-box .btn { border: 0; cursor: pointer; font: inherit; font-weight: 700; font-size: 17px; text-align: center; }
+  .buy-yearly { background: #FFFFFF; color: #B30000; }
+  .buy-yearly:hover { background: #FFE9E9; }
+  .buy-monthly { background: transparent; color: #FFFFFF; border: 1.5px solid #6A6A6A !important; padding: 13px 22px; font-size: 15px !important; }
+  .buy-monthly:hover { border-color: #FFFFFF !important; }
+  .buy-note { text-align: center; color: #C8C8C8; font-size: 13px; line-height: 1.5; }
+  .buy-note a { color: #FFFFFF; }
   .soon-box { margin-top: auto; text-align: center; background: #3A3A3A; color: #E6E6E6; padding: 15px 22px; border-radius: 12px; font-weight: 600; }
 
   .soon { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
@@ -607,8 +616,15 @@
           <div>Link as many calendars as you like</div>
           <div>Everything in Free, cancel anytime</div>
         </div>
-        <div class="soon-box">Premium checkout opens soon</div>
-        <div style="text-align: center; color: #C8C8C8; font-size: 14px">Install the free version today. You can upgrade inside the app once Premium opens.</div>
+        <div class="buy-box" id="buyBox" hidden>
+          <button type="button" class="btn buy-yearly" data-price="yearly">Get Premium yearly &middot; $14.99</button>
+          <button type="button" class="btn buy-monthly" data-price="monthly">Or $1.99 month to month</button>
+          <div class="buy-note">Secure checkout by Paddle. Card, PayPal, Apple Pay and Google Pay. 14-day money-back guarantee. <a href="key.html">Lost your key?</a></div>
+        </div>
+        <div id="soonBox">
+          <div class="soon-box">Premium checkout opens soon</div>
+          <div style="text-align: center; color: #C8C8C8; font-size: 14px; margin-top: 10px">Install the free version today. You can upgrade inside the app once Premium opens.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -813,6 +829,32 @@
     var pop = function () { t.classList.remove('show'); void t.offsetWidth; t.classList.add('show'); };
     setTimeout(pop, 1600); setInterval(pop, 7000);
   }
+})();
+</script>
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+(function () {
+  // Flip CHECKOUT_LIVE to true once Paddle has approved the account and website.
+  var CHECKOUT_LIVE = false;
+  var PADDLE_TOKEN = 'live_e9f0cecada2b370d4db3af81efc';
+  var PRICES = { monthly: 'pri_01m7rzrqxpe61ax1w7ht359qx9', yearly: 'pri_01m7rzskm537q1w1mcr2m4x84e' };
+  if (!CHECKOUT_LIVE && !/[?&]checkout=test/.test(location.search)) return;
+  if (!window.Paddle) return;
+  Paddle.Initialize({
+    token: PADDLE_TOKEN,
+    eventCallback: function (ev) {
+      if (ev.name === 'checkout.completed' && ev.data && ev.data.transaction_id) {
+        setTimeout(function () { location.href = 'key.html?txn=' + encodeURIComponent(ev.data.transaction_id); }, 1500);
+      }
+    }
+  });
+  document.getElementById('buyBox').hidden = false;
+  document.getElementById('soonBox').hidden = true;
+  document.querySelectorAll('[data-price]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      Paddle.Checkout.open({ items: [{ priceId: PRICES[b.getAttribute('data-price')], quantity: 1 }], settings: { displayMode: 'overlay', theme: 'light', variant: 'one-page' } });
+    });
+  });
 })();
 </script>
 </body>

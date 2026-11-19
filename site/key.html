@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your license key - Ignore Me Not</title>
+<meta name="description" content="Get or recover your Ignore Me Not Premium license key."><meta name="robots" content="noindex">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  [hidden] { display: none !important; }
+  :root { --red: #CC0000; --ink: #161616; --muted: #4A4A4A; --soft: #F6F6F4; --line: #E2E2E2; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--ink); background: #FFFFFF; }
+  a { color: #B30000; }
+  a:hover { color: #800000; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  h1, h2 { font-family: 'Space Grotesk', sans-serif; margin: 0; }
+  h1 { font-size: 64px; line-height: 1.02; letter-spacing: -0.02em; }
+  h2 { font-size: 44px; line-height: 1.1; }
+  h3 { margin: 0; }
+  p { margin: 0; }
+  .btn { display: inline-block; text-decoration: none; font-weight: 600; border-radius: 12px; padding: 16px 26px; font-size: 17px; }
+  .btn-red { background: var(--red); color: #FFFFFF; }
+  .btn-red:hover { background: #A30000; color: #FFFFFF; }
+  .btn-outline { background: #FFFFFF; color: var(--ink); border: 1.5px solid #D6D6D6; }
+  .btn-outline:hover { color: var(--ink); border-color: var(--ink); }
+  .pill { display: inline-block; background: #FDECEC; color: #9E0000; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 999px; }
+  .section { padding: 88px 0; }
+  .soft { background: var(--soft); }
+  .lead { font-size: 18px; color: var(--muted); line-height: 1.55; }
+  .head { display: flex; flex-direction: column; gap: 12px; max-width: 640px; margin-bottom: 48px; }
+
+  header { border-bottom: 1px solid #EEEEEE; }
+  .nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 18px; padding-bottom: 18px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .brand:hover { color: var(--ink); }
+  .logo { width: 36px; height: 36px; border-radius: 50%; background: var(--red); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; }
+  .brand span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; }
+  .links { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px; font-weight: 500; }
+  .links a { color: #3A3A3A; text-decoration: none; }
+  .links .btn { padding: 12px 20px; font-size: 15px; border-radius: 10px; color: #FFFFFF; }
+
+  .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 56px; padding-top: 88px; padding-bottom: 96px; }
+  .hero-text { flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+  .hero-text .sub { font-size: 20px; line-height: 1.55; color: var(--muted); max-width: 520px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px; }
+  .small { font-size: 14px; color: #5E5E5E; line-height: 1.5; }
+  .mock { flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; align-items: center; }
+  .screen-frame { width: 100%; max-width: 540px; background: #1E1E1E; border-radius: 18px 18px 6px 6px; padding: 14px; }
+  .screen { background: var(--red); border-radius: 6px; aspect-ratio: 16 / 10; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; text-align: center; color: #FFFFFF; }
+  .screen .k { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; }
+  .screen .t { font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 700; line-height: 1.05; }
+  .screen .w { font-size: 15px; font-weight: 700; }
+  .screen .n { font-size: 13px; opacity: 0.92; }
+  .screen .b { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding-top: 10px; }
+  .screen .b div { background: #FFFFFF; color: #B30000; font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: 6px; }
+  .base { width: 112%; max-width: 620px; height: 16px; background: #CFCFCF; border-radius: 0 0 14px 14px; }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .card { background: #FFFFFF; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
+  .num { width: 44px; height: 44px; border-radius: 50%; background: var(--red); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; }
+  .card h3 { font-size: 22px; }
+  .card p, .feat p { font-size: 16px; color: var(--muted); line-height: 1.55; }
+
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px 32px; }
+  .feat { display: flex; gap: 16px; align-items: flex-start; }
+  .feat svg { flex: none; }
+  .feat div { display: flex; flex-direction: column; gap: 6px; }
+  .feat h3 { font-size: 19px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .chips span { background: var(--soft); padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 500; }
+
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 880px; }
+  .plan { border-radius: 20px; padding: 36px; display: flex; flex-direction: column; gap: 20px; }
+  .plan.free { background: #FFFFFF; border: 1.5px solid var(--line); }
+  .plan.prem { background: var(--ink); color: #FFFFFF; }
+  .plan .name { font-size: 18px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .badge { background: var(--red); font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; color: #FFFFFF; }
+  .price { display: flex; align-items: baseline; gap: 6px; }
+  .price b { font-family: 'Space Grotesk', sans-serif; font-size: 48px; }
+  .list { display: flex; flex-direction: column; gap: 10px; font-size: 16px; }
+  .plan.free .list { color: #3A3A3A; }
+  .plan.prem .list { color: #E6E6E6; }
+  .plan .btn { margin-top: auto; text-align: center; }
+  .plan.free .btn { background: #FFFFFF; color: var(--ink); border: 1.5px solid var(--ink); }
+  .soon-box { margin-top: auto; text-align: center; background: #3A3A3A; color: #E6E6E6; padding: 15px 22px; border-radius: 12px; font-weight: 600; }
+
+  .soon { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .soon div { border: 1.5px solid var(--line); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .soon h3 { font-size: 18px; }
+  .soon p { font-size: 15px; color: var(--muted); line-height: 1.5; }
+
+  .faq { max-width: 820px; }
+  details { border-top: 1px solid var(--line); padding: 22px 0; }
+  details:last-child { border-bottom: 1px solid var(--line); }
+  summary { font-size: 18px; font-weight: 600; cursor: pointer; }
+  details p { margin-top: 12px; font-size: 16px; color: var(--muted); line-height: 1.6; }
+
+  .final { background: var(--red); color: #FFFFFF; padding: 80px 24px; text-align: center; }
+  .final h2 { font-size: 48px; line-height: 1.08; max-width: 820px; margin: 0 auto 22px; }
+  .final .btn { background: #FFFFFF; color: #B30000; font-weight: 700; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #5E5E5E; padding-top: 32px; padding-bottom: 32px; }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 44px; }
+    h2, .final h2 { font-size: 34px; }
+    .section { padding: 64px 0; }
+    .hero { padding-top: 56px; padding-bottom: 64px; gap: 40px; }
+    .links { gap: 16px; }
+    .screen .t { font-size: 28px; }
+    .base { width: 100%; }
+  }
+</style>
+
+<style>
+  .legal { max-width: 760px; padding-top: 64px; padding-bottom: 88px; }
+  .legal h1 { font-size: 48px; margin-bottom: 12px; }
+  .legal .updated { color: #5E5E5E; font-size: 14px; margin-bottom: 40px; }
+  .legal h2 { font-size: 24px; margin: 40px 0 12px; }
+  .legal p, .legal li { font-size: 16px; line-height: 1.7; color: #3A3A3A; }
+  .legal p + p { margin-top: 12px; }
+  .legal ul { padding-left: 22px; margin: 12px 0 0; }
+  .legal li + li { margin-top: 6px; }
+  .note { background: var(--soft); border-radius: 12px; padding: 16px 20px; margin-bottom: 32px; font-size: 15px; color: #3A3A3A; line-height: 1.6; }
+  .contact-card { border: 1.5px solid var(--line); border-radius: 16px; padding: 28px; margin-top: 24px; }
+  .contact-card h2 { margin-top: 0; }
+  .email { font-size: 22px; font-weight: 700; color: var(--ink); word-break: break-all; }
+  .flinks { display: flex; flex-wrap: wrap; gap: 20px; }
+  .flinks a { color: #5E5E5E; text-decoration: none; }
+  .flinks a:hover { color: var(--ink); text-decoration: underline; }
+</style>
+
+<style>
+  .keybox { background: var(--soft); border: 1.5px solid var(--line); border-radius: 14px; padding: 22px; margin: 8px 0 8px; }
+  .klabel { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #5E5E5E; margin-bottom: 10px; }
+  .krow { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .krow code { font-size: 17px; font-weight: 600; word-break: break-all; flex: 1; min-width: 240px; color: var(--ink); }
+  .kbtn { font: inherit; font-weight: 700; background: var(--red); color: #fff; border: 0; border-radius: 8px; padding: 10px 18px; cursor: pointer; }
+  .kbtn:disabled { opacity: .5; cursor: default; }
+  .kmsg { font-size: 14px; color: #5E5E5E; margin-top: 10px; min-height: 1em; }
+  .kmsg.err { color: #B30000; }
+  .legal ol { padding-left: 22px; margin: 12px 0 0; }
+  .legal ol li { font-size: 16px; line-height: 1.7; color: #3A3A3A; }
+  .recform { display: flex; flex-direction: column; gap: 16px; max-width: 520px; }
+  .recform label { display: flex; flex-direction: column; gap: 6px; font-size: 15px; font-weight: 600; color: #3A3A3A; }
+  .recform input { font: inherit; font-weight: 400; padding: 12px 14px; border: 1.5px solid #D6D6D6; border-radius: 10px; }
+  .recform input:focus { outline: 2px solid var(--red); outline-offset: 1px; border-color: transparent; }
+  .recform .btn { border: 0; cursor: pointer; align-self: flex-start; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><div class="logo" aria-hidden="true">!</div><span>Ignore Me Not</span></a>
+    <nav class="links">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn btn-red" href="index.html#download">Download free</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap legal">
+
+<div id="claim" hidden>
+  <h1>Thank you!</h1>
+  <p class="updated">Welcome to Ignore Me Not Premium.</p>
+  <div class="keybox" id="keyWrap">
+    <div class="klabel">Your license key</div>
+    <div class="krow"><code id="keyText">Getting your key&hellip;</code><button type="button" class="kbtn" id="copyBtn" disabled>Copy</button></div>
+    <div class="kmsg" id="keyMsg">This usually takes a few seconds.</div>
+  </div>
+  <h2>Turn on Premium</h2>
+  <ol>
+    <li>Open Ignore Me Not. Don't have it yet? <a href="index.html#download">Download it free</a>.</li>
+    <li>Click <b>Go Premium</b> at the bottom of the window.</li>
+    <li>Paste your key and click <b>Activate</b>.</li>
+  </ol>
+  <p style="margin-top:16px">Save your key somewhere safe. You'll also get a receipt from Paddle by email. To cancel or change how you pay, use the link in that email or go to <a href="https://paddle.net">paddle.net</a>.</p>
+</div>
+
+<div id="recover">
+  <h1>Find your license key</h1>
+  <p class="updated">Lost your key? Get it back in a few seconds.</p>
+  <form id="recForm" class="recform" novalidate>
+    <label><span>Email you used to buy Premium</span><input type="email" id="recEmail" autocomplete="email" required></label>
+    <label><span>Transaction ID from your Paddle receipt email (starts with <code>txn_</code>)</span><input type="text" id="recTxn" placeholder="txn_..." required></label>
+    <button type="submit" class="btn btn-red">Show my key</button>
+    <div class="kmsg" id="recMsg"></div>
+  </form>
+  <div class="keybox" id="recKeyWrap" hidden>
+    <div class="klabel">Your license key</div>
+    <div class="krow"><code id="recKey"></code><button type="button" class="kbtn" id="recCopy">Copy</button></div>
+  </div>
+  <p style="margin-top:24px">Still stuck? Email <a href="mailto:hello@ignoremenot.app">hello@ignoremenot.app</a>.</p>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Ignore Me Not</span>
+    <nav class="flinks" aria-label="Legal and contact">
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="refund.html">Refund Policy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  function copy(btn, text) {
+    navigator.clipboard.writeText(text).then(function () { btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = 'Copy'; }, 1800); });
+  }
+  var txn = new URLSearchParams(location.search).get('txn');
+  if (txn) {
+    $('claim').hidden = false; $('recover').hidden = true;
+    var tries = 0;
+    (function claim() {
+      fetch('/api/claim', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ transaction_id: txn }) })
+        .then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }); })
+        .then(function (res) {
+          if (res.j.key) {
+            $('keyText').textContent = res.j.key; $('copyBtn').disabled = false;
+            $('keyMsg').textContent = 'Copy this key and paste it into the app.';
+            $('copyBtn').onclick = function () { copy($('copyBtn'), res.j.key); };
+          } else if (res.s === 202 && ++tries < 20) { setTimeout(claim, 3000); }
+          else { throw new Error(); }
+        })
+        .catch(function () {
+          if (++tries < 4) return setTimeout(claim, 3000);
+          $('keyText').textContent = 'We couldn\u2019t load your key just yet.';
+          $('keyMsg').className = 'kmsg err';
+          $('keyMsg').innerHTML = 'Your payment went through. Refresh this page in a minute, or email <a href="mailto:hello@ignoremenot.app">hello@ignoremenot.app</a> with this code: ' + txn.replace(/[^a-z0-9_]/gi, '');
+        });
+    })();
+  }
+  $('recForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = $('recEmail').value.trim(), t = $('recTxn').value.trim();
+    var m = $('recMsg'); m.className = 'kmsg';
+    if (!email || !/^txn_/i.test(t)) { m.className = 'kmsg err'; m.textContent = 'Please enter your email and the transaction ID that starts with txn_.'; return; }
+    m.textContent = 'Checking\u2026';
+    fetch('/api/recover', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, transaction_id: t.toLowerCase() }) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (!j.key) throw new Error();
+        m.textContent = ''; $('recKey').textContent = j.key; $('recKeyWrap').hidden = false;
+        $('recCopy').onclick = function () { copy($('recCopy'), j.key); };
+      })
+      .catch(function () { m.className = 'kmsg err'; m.textContent = 'We couldn\u2019t find a purchase with that email and transaction ID. Please check both and try again.'; });
+  });
+})();
+</script>
+</body>
+</html>
